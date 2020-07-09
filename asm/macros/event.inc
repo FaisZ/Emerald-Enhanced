@@ -279,8 +279,8 @@
 	.byte 0x27
 	.endm
 
-	@ Blocks script execution for time (frames? milliseconds?).
-	.macro delay time:req
+	@ Blocks script execution for frames
+	.macro delay frames:req
 	.byte 0x28
 	.2byte \time
 	.endm
