@@ -419,7 +419,7 @@ static void GenerateOpponentMons(void)
             continue;
 
         species[i] = gFacilityTrainerMons[sRandMonSetId].species;
-        heldItems[i] = gBattleFrontierHeldItems[gFacilityTrainerMons[sRandMonSetId].itemTableId];
+        //heldItems[i] = [gFacilityTrainerMons[sRandMonSetId].heldItem];
         gFrontierTempParty[i] = sRandMonSetId;
         i++;
     }

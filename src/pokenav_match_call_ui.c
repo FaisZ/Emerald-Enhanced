@@ -685,7 +685,7 @@ void sub_81C8B70(struct PokenavListMenuWindow *listWindow, s32 a1, s32 a2)
         CopyWindowToVram(listWindow->windowId, 2);
     }
 
-    CopyWindowToVram(a0->windowId, 1);
+    CopyWindowToVram(listWindow->windowId, 1);
 }
 
 void sub_81C8C64(struct PokenavListMenuWindow *listWindow, u32 a1)

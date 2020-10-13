@@ -4479,7 +4479,7 @@ static u8 RandomStatRaiseBerry(u32 battlerId, u32 itemId)
         gBattleTextBuff2[4] = B_BUFF_STRING;
         gBattleTextBuff2[5] = STRINGID_STATROSE;
         gBattleTextBuff2[6] = STRINGID_STATROSE >> 8;
-        gBattleTextBuff2[7] = EOS;
+        gBattleTextBuff2[7] = 0;
 
         gEffectBattler = battlerId;
         SET_STATCHANGER(i + 1, 2, FALSE);

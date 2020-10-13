@@ -8,6 +8,7 @@
 #include "frontier_util.h"
 #include "battle_tower.h"
 #include "random.h"
+#include "constants/species.h"
 #include "constants/battle_ai.h"
 #include "constants/battle_factory.h"
 #include "constants/battle_frontier.h"
@@ -343,12 +344,11 @@ static void GenerateOpponentMons(void)
             continue;
 
         species[i] = gFacilityTrainerMons[monId].species;
-<<<<<<< HEAD
-        gFrontierNpcTeam[i] = monId;
-=======
-        heldItems[i] = gBattleFrontierHeldItems[gFacilityTrainerMons[monId].itemTableId];
+        gFrontierTempParty[i] = monId;
+        i++;
     }
 }
+
 static void SetOpponentGfxVar(void)
 {
     SetBattleFacilityTrainerGfxId(gTrainerBattleOpponent_A, 0);

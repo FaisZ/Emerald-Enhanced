@@ -5179,7 +5179,7 @@ void SetTypeBeforeUsingMove(u16 move, u8 battlerAtk)
     }
 }
 
-static void HandleAction_UseMove(void)
+void HandleAction_UseMove(void)
 {
     u32 i, side, moveType, var = 4;
 
@@ -5432,7 +5432,7 @@ static void HandleAction_UseMove(void)
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
-static void HandleAction_Switch(void)
+void HandleAction_Switch(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5452,7 +5452,7 @@ static void HandleAction_Switch(void)
     UndoFormChange(gBattlerPartyIndexes[gBattlerAttacker], GetBattlerSide(gBattlerAttacker));
 }
 
-static void HandleAction_UseItem(void)
+void HandleAction_UseItem(void)
 {
     gBattlerAttacker = gBattlerTarget = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5612,7 +5612,7 @@ bool8 TryRunFromBattle(u8 battler)
     return effect;
 }
 
-static void HandleAction_Run(void)
+void HandleAction_Run(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
 
@@ -5666,7 +5666,7 @@ static void HandleAction_Run(void)
     }
 }
 
-static void HandleAction_WatchesCarefully(void)
+void HandleAction_WatchesCarefully(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5675,7 +5675,7 @@ static void HandleAction_WatchesCarefully(void)
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
-static void HandleAction_SafariZoneBallThrow(void)
+void HandleAction_SafariZoneBallThrow(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5686,7 +5686,7 @@ static void HandleAction_SafariZoneBallThrow(void)
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
-static void HandleAction_ThrowPokeblock(void)
+void HandleAction_ThrowPokeblock(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5710,7 +5710,7 @@ static void HandleAction_ThrowPokeblock(void)
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
-static void HandleAction_GoNear(void)
+void HandleAction_GoNear(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5737,7 +5737,7 @@ static void HandleAction_GoNear(void)
     gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;
 }
 
-static void HandleAction_SafariZoneRun(void)
+void HandleAction_SafariZoneRun(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     PlaySE(SE_FLEE);
@@ -5745,7 +5745,7 @@ static void HandleAction_SafariZoneRun(void)
     gBattleOutcome = B_OUTCOME_RAN;
 }
 
-static void HandleAction_WallyBallThrow(void)
+void HandleAction_WallyBallThrow(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
     gBattle_BG0_X = 0;
@@ -5758,7 +5758,7 @@ static void HandleAction_WallyBallThrow(void)
     gActionsByTurnOrder[1] = B_ACTION_FINISHED;
 }
 
-static void HandleAction_TryFinish(void)
+void HandleAction_TryFinish(void)
 {
     if (!HandleFaintedMonActions())
     {
@@ -5767,7 +5767,7 @@ static void HandleAction_TryFinish(void)
     }
 }
 
-static void HandleAction_NothingIsFainted(void)
+void HandleAction_NothingIsFainted(void)
 {
     gCurrentTurnActionNumber++;
     gCurrentActionFuncId = gActionsByTurnOrder[gCurrentTurnActionNumber];
@@ -5777,7 +5777,7 @@ static void HandleAction_NothingIsFainted(void)
                     | HITMARKER_CHARGING | HITMARKER_x4000000);
 }
 
-static void HandleAction_ActionFinished(void)
+void HandleAction_ActionFinished(void)
 {
     *(gBattleStruct->monToSwitchIntoId + gBattlerByTurnOrder[gCurrentTurnActionNumber]) = 6;
     gCurrentTurnActionNumber++;
