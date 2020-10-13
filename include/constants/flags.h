@@ -1519,7 +1519,7 @@
 #define FLAG_RYU_MANAPHY_RAN                        (SYSTEM_FLAGS + 0x91)
 #define FLAG_RYU_NECROZMA_RAN                       (SYSTEM_FLAGS + 0x92)
 #define FLAG_RYU_KYOGRE_RAN                         (SYSTEM_FLAGS + 0x93)
-#define FLAG_UNUSED_SF094                           (SYSTEM_FLAGS + 0x94)
+#define FLAG_SYS_DEXNAV_SEARCH                      (SYSTEM_FLAGS + 0x94)
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_MAXIE (SYSTEM_FLAGS + 0x95)
 #define FLAG_RYU_HIDE_111_MAGMA_MEETING_TABITHA1    (SYSTEM_FLAGS + 0x96)
 #define FLAG_RYU_HIDE_111_MAGMA_MEETING_TABITHA2    (SYSTEM_FLAGS + 0x97)
@@ -1575,8 +1575,8 @@
 #define FLAG_RYU_TEMP_HIDE_FOLLOWER_COURTNEY           (DAILY_FLAGS_START + 0x4) // hack for follower courtney quest
 #define FLAG_DAILY_SNOWY_SHORE_RECEIVED_BERRY          (DAILY_FLAGS_START + 0x5)
 #define FLAG_DAILY_FROSTBITE_FIELD_RECEIVED_FERTILIZER (DAILY_FLAGS_START + 0x6)
-#define FLAG_UNUSED_0x927                              (DAILY_FLAGS_START + 0x7) // Unused Flag
-#define FLAG_UNUSED_0x928                              (DAILY_FLAGS_START + 0x8) // Unused Flag
+#define FLAG_SYS_DETECTOR_MODE                         (DAILY_FLAGS_START + 0x7) // Unused Flag
+#define FLAG_SYS_DEXNAV_GET                            (DAILY_FLAGS_START + 0x8) // Unused Flag
 #define FLAG_UNUSED_0x929                              (DAILY_FLAGS_START + 0x9) // Unused Flag
 #define FLAG_DAILY_PICKED_LOTO_TICKET                  (DAILY_FLAGS_START + 0xA)
 #define FLAG_DAILY_ROUTE_114_RECEIVED_BERRY            (DAILY_FLAGS_START + 0xB)

@@ -185,7 +185,7 @@ static u8 ChooseWildMonIndex_Land(void)
         return 11;
 }
 
-static u8 ChooseWildMonIndex_WaterRock(void)
+u8 ChooseWildMonIndex_WaterRock(void)
 {
     u8 rand = Random() % ENCOUNTER_CHANCE_WATER_MONS_TOTAL;
 
@@ -244,7 +244,46 @@ static u8 ChooseWildMonIndex_Fishing(u8 rod)
     return wildMonIndex;
 }
 
-static u16 GetCurrentMapWildMonHeaderId(void)
+static u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon)
+{
+    u8 min;
+    u8 max;
+    u8 range;
+    u8 rand;
+
+    // Make sure minimum level is less than maximum level
+    if (wildPokemon->maxLevel >= wildPokemon->minLevel)
+    {
+        min = wildPokemon->minLevel;
+        max = wildPokemon->maxLevel;
+    }
+    else
+    {
+        min = wildPokemon->maxLevel;
+        max = wildPokemon->minLevel;
+    }
+    range = max - min + 1;
+    rand = Random() % range;
+
+    // check ability for max level mon
+    if (!GetMonData(&gPlayerParty[0], MON_DATA_SANITY_IS_EGG))
+    {
+        u8 ability = GetMonAbility(&gPlayerParty[0]);
+        if (ability == ABILITY_HUSTLE || ability == ABILITY_VITAL_SPIRIT || ability == ABILITY_PRESSURE)
+        {
+            if (Random() % 2 == 0)
+                return max;
+
+            if (rand != 0)
+                rand--;
+        }
+    }
+
+    return min + rand;
+}
+
+
+u16 GetCurrentMapWildMonHeaderId(void)
 {
     u16 i;
 
@@ -613,7 +652,7 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
 {
     u16 headerId;
     struct Roamer *roamer;
-
+    
     if (sWildEncountersDisabled == TRUE)
         return FALSE;
 
@@ -1036,3 +1075,20 @@ static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
     if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
         *encRate = *encRate * 2 / 3;
 }
+
+u8 ChooseHiddenMonIndex(void)
+{
+    #ifdef ENCOUNTER_CHANCE_HIDDEN_MONS_TOTAL
+        u8 rand = Random() % ENCOUNTER_CHANCE_HIDDEN_MONS_TOTAL;
+
+        if (rand < ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_0)
+            return 0;
+        else if (rand >= ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_0 && rand < ENCOUNTER_CHANCE_HIDDEN_MONS_SLOT_1)
+            return 1;
+        else
+            return 2;
+    #else
+        return 0xFF;
+    #endif
+}
+

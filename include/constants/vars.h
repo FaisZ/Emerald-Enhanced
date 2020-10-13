@@ -238,7 +238,7 @@
 #define VAR_RYU_SAVED_BGM                    0x40DC
 #define VAR_EVENT_PICHU_SLOT                 0x40DD
 #define VAR_RYU_LANETTE_VAR                  0x40DE
-#define VAR_UNUSED_0x40DF                    0x40DF // Var is written to, but never read
+#define VAR_DEXNAV_STEP_COUNTER              0x40DF // Var is written to, but never read
 #define VAR_UNUSED_0x40E0                    0x40E0 // Var is written to, but never read
 #define VAR_UNUSED_0x40E1                    0x40E1 // Var is written to, but never read
 #define VAR_UNUSED_0x40E2                    0x40E2 // Var is written to, but never read
@@ -298,7 +298,7 @@
 #define VAR_CONTEST_CATEGORY          0x8011
 #define VAR_MON_BOX_ID                0x8012
 #define VAR_MON_BOX_POS               0x8013
-#define VAR_UNUSED_0x8014             0x8014
+#define VAR_DEXNAV_SPECIES            0x8014
 #define VAR_TRAINER_BATTLE_OPPONENT_A 0x8015 // Alias of gTrainerBattleOpponent_A
 
 //drawheadshot defines
