@@ -296,7 +296,6 @@ static void GenerateInitialRentalMons(void)
     u16 currSpecies;
     u16 species[PARTY_SIZE];
     u16 monIds[PARTY_SIZE];
-    u16 heldItems[PARTY_SIZE];
 
     firstMonId = 0;
     gFacilityTrainers = gSlateportBattleTentTrainers;
@@ -304,7 +303,6 @@ static void GenerateInitialRentalMons(void)
     {
         species[i] = 0;
         monIds[i] = 0;
-        heldItems[i] = 0;
     }
     gFacilityTrainerMons = gSlateportBattleTentMons;
     currSpecies = SPECIES_NONE;
@@ -329,22 +327,8 @@ static void GenerateInitialRentalMons(void)
         if (j != i + firstMonId)
             continue;
 
-        // Cannot have two same held items.
-        for (j = firstMonId; j < i + firstMonId; j++)
-        {
-            if (heldItems[j] != 0 && heldItems[j] == gFacilityTrainerMons[monSetId].heldItem)
-            {
-                if (gFacilityTrainerMons[monSetId].species == currSpecies)
-                    currSpecies = SPECIES_NONE;
-                break;
-            }
-        }
-        if (j != i + firstMonId)
-            continue;
-
         gSaveBlock2Ptr->frontier.rentalMons[i].monId = monSetId;
         species[i] = gFacilityTrainerMons[monSetId].species;
-        heldItems[i] = gFacilityTrainerMons[monSetId].heldItem;
         monIds[i] = monSetId;
         i++;
     }
@@ -360,7 +344,6 @@ static void GenerateOpponentMons(void)
         const u16 *monSet;
     #endif
     u16 species[FRONTIER_PARTY_SIZE];
-    u16 heldItems[FRONTIER_PARTY_SIZE];
     s32 monId = 0;
 
     gFacilityTrainers = gSlateportBattleTentTrainers;
@@ -410,17 +393,8 @@ static void GenerateOpponentMons(void)
         if (k != i)
             continue;
 
-        for (k = 0; k < i; k++)
-        {
-            if (heldItems[k] != 0 && heldItems[k] == gFacilityTrainerMons[sRandMonSetId].heldItem)
-                break;
-        }
-        if (k != i)
-            continue;
-
         species[i] = gFacilityTrainerMons[sRandMonSetId].species;
-        //heldItems[i] = [gFacilityTrainerMons[sRandMonSetId].heldItem];
-        gFrontierNpcTeam[i] = sRandMonSetId;
+        gFrontierTempParty[i] = sRandMonSetId;
         i++;
     }
 }
