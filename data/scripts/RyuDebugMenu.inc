@@ -185,13 +185,13 @@ RDB_TempVarsViewMsg:
 	.string "{STR_VAR_1}$"
 
 RyuDebug_Utility1::
-	checkspecies SPECIES_SNEASEL
-	compare VAR_RESULT, TRUE
-	goto_if_ne	RyuDebug_ViewTempVars
-	buffernumberstring 0, VAR_TEMP_F
-	msgbox RDB_TempVarsViewMsg
+	callnative CheckSaveFileSize
+	msgbox RDB_SaveBlockSizes
 	release
 	end
+
+RDB_SaveBlockSizes:
+	.string "SaveBlock1 size is {STR_VAR_1}/15872.\nSaveBlock2 size is {STR_VAR_2}/3968.$"
 
 exampletext:
     .string "This is standard text.\p"
