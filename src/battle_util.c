@@ -1,5 +1,6 @@
 #include "global.h"
 #include "battle.h"
+#include "battle_util.h"
 #include "battle_anim.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
@@ -10,9 +11,7 @@
 #include "util.h"
 #include "battle_scripts.h"
 #include "random.h"
-#include "text.h"
 #include "string_util.h"
-#include "battle_message.h"
 #include "battle_ai_script_commands.h"
 #include "event_data.h"
 #include "link.h"
@@ -32,7 +31,6 @@
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
-#include "constants/species.h"
 #include "constants/weather.h"
 #include "data.h"
 
@@ -2668,16 +2666,8 @@ bool8 HasNoMonsToSwitch(u8 battler, u8 partyIdBattlerOn1, u8 partyIdBattlerOn2)
             }
             else
             {
-                // FIXME: Compiler insists on moving r4 into r1 before doing the eor.
-                #ifndef NONMATCHING
-                    register u32 var asm("r1");
-                #else
-                    u32 var;
-                #endif // NONMATCHING
-
                 party = gEnemyParty;
-                var = battler ^ BIT_SIDE;
-                if (var == 0)
+                if (battler == 1)
                     id1 = 0;
                 else
                     id1 = 1;

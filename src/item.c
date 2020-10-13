@@ -191,63 +191,64 @@ bool8 HasAtLeastOneBerry(void)
 // Refuses to match.
 bool8 CheckBagHasSpace(u16 itemId, u16 count)
 {
-    u8 i;
+    u8 i, pocket;
+    u16 slotCapacity, ownedCount;
 
     if (ItemId_GetPocket(itemId) == POCKET_NONE)
         return FALSE;
 
-    if (InBattlePyramid() || FlagGet(FLAG_STORING_ITEMS_IN_PYRAMID_BAG) == TRUE)
+    if (InBattlePyramid() || (FlagGet(FLAG_STORING_ITEMS_IN_PYRAMID_BAG) == TRUE))
     {
         return CheckPyramidBagHasSpace(itemId, count);
     }
+
+    pocket = ItemId_GetPocket(itemId) - 1;
+    if (pocket != BERRIES_POCKET)
+        slotCapacity = MAX_BAG_ITEM_CAPACITY;
     else
+        slotCapacity = MAX_BERRY_CAPACITY;
+
+    // Check space in any existing item slots that already contain this item
+    for (i = 0; i < gBagPockets[pocket].capacity; i++)
     {
-        u8 pocket;
-        u16 slotCapacity;
-        u16 ownedCount;
+        if (gBagPockets[pocket].itemSlots[i].itemId == itemId)
+        {
+            ownedCount = GetBagItemQuantity(&gBagPockets[pocket].itemSlots[i].quantity);
+            if (ownedCount + count <= slotCapacity)
+                return TRUE;
+            if (pocket == TMHM_POCKET || pocket == BERRIES_POCKET)
+                return FALSE;
+            count -= (slotCapacity - ownedCount);
+            if (count == 0)
+                break; //Should just be "return TRUE", since setting count to 0 means all the remaining checks until return will be false anyway, but that doesn't match
+        }
+    }
 
-        pocket = ItemId_GetPocket(itemId) - 1;
-        if (pocket != BERRIES_POCKET)
-            slotCapacity = MAX_BAG_ITEM_CAPACITY;
-        else
-            slotCapacity = MAX_BERRY_CAPACITY;
-
-        // Check space in any existing item slots that already contain this item
+    // Check space in empty item slots
+    if (count > 0) //if (count !=0) also works here; both match
+    {
         for (i = 0; i < gBagPockets[pocket].capacity; i++)
         {
-            if (gBagPockets[pocket].itemSlots[i].itemId == itemId)
+            if (gBagPockets[pocket].itemSlots[i].itemId == 0)
             {
-                ownedCount = GetBagItemQuantity(&gBagPockets[pocket].itemSlots[i].quantity);
-                if (ownedCount + count <= slotCapacity)
-                    return TRUE;
-                if (pocket == TMHM_POCKET || pocket == BERRIES_POCKET)
-                    return FALSE;
-                count -= slotCapacity - ownedCount;
-                if (count == 0)
-                    return TRUE;
-            }
-        }
-
-        // Check space in empty item slots
-        if (count > 0)
-        {
-            for (i = 0; i < gBagPockets[pocket].capacity; i++)
-            {
-                if (gBagPockets[pocket].itemSlots[i].itemId == 0)
+                if (count > slotCapacity)
                 {
-                    if (count <= slotCapacity)
-                        return TRUE;
                     if (pocket == TMHM_POCKET || pocket == BERRIES_POCKET)
                         return FALSE;
                     count -= slotCapacity;
                 }
+                else
+                {
+                    count = 0; //Should just be "return TRUE", since setting count to 0 means all the remaining checks until return will be false anyway, but that doesn't match
+                    break;
+                }
             }
-            if (count > 0)
-                return FALSE; // No more item slots. The bag is full
         }
-
-        return TRUE;
+        if (count > 0)    //if (count !=0) also works here; both match
+            return FALSE; // No more item slots. The bag is full
     }
+
+    return TRUE;
 }
 //#else
 //NAKED

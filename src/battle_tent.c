@@ -17,7 +17,6 @@
 #include "constants/items.h"
 #include "constants/layouts.h"
 #include "constants/region_map_sections.h"
-#include "constants/species.h"
 #include "constants/trainers.h"
 
 // This file's functions.
@@ -420,8 +419,8 @@ static void GenerateOpponentMons(void)
             continue;
 
         species[i] = gFacilityTrainerMons[sRandMonSetId].species;
-        heldItems[i] = gFacilityTrainerMons[sRandMonSetId].heldItem;
-        gFrontierNpcTeam[i] = sRandMonSetId;
+        heldItems[i] = gBattleFrontierHeldItems[gFacilityTrainerMons[sRandMonSetId].itemTableId];
+        gFrontierTempParty[i] = sRandMonSetId;
         i++;
     }
 }

@@ -11,6 +11,7 @@
 #include "battle_scripts.h"
 #include "battle_setup.h"
 #include "battle_tower.h"
+#include "battle_util.h"
 #include "berry.h"
 #include "bg.h"
 #include "data.h"
@@ -60,7 +61,6 @@
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
-#include "constants/species.h"
 #include "constants/trainers.h"
 #include "cable_club.h"
 #include "pokemon.h"
@@ -106,7 +106,6 @@ static void SpriteCB_AnimFaintOpponent(struct Sprite *sprite);
 static void SpriteCb_BlinkVisible(struct Sprite *sprite);
 static void SpriteCallbackDummy_3(struct Sprite *sprite);
 static void oac_poke_ally_(struct Sprite *sprite);
-static void SpecialStatusesClear(void);
 static void TurnValuesCleanUp(bool8 var0);
 static void SpriteCB_BounceEffect(struct Sprite *sprite);
 static void BattleStartClearSetData(void);
@@ -129,19 +128,7 @@ static void HandleEndTurn_BattleLost(void);
 static void HandleEndTurn_RanFromBattle(void);
 static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
-static void HandleAction_UseMove(void);
-static void HandleAction_Switch(void);
-static void HandleAction_UseItem(void);
-static void HandleAction_Run(void);
-static void HandleAction_WatchesCarefully(void);
-static void HandleAction_SafariZoneBallThrow(void);
-static void HandleAction_ThrowPokeblock(void);
-static void HandleAction_GoNear(void);
-static void HandleAction_SafariZoneRun(void);
-static void HandleAction_WallyBallThrow(void);
-static void HandleAction_TryFinish(void);
-static void HandleAction_NothingIsFainted(void);
-static void HandleAction_ActionFinished(void);
+
 
 // EWRAM vars
 EWRAM_DATA u16 gBattle_BG0_X = 0;
@@ -525,19 +512,16 @@ static void CB2_InitBattleInternal(void)
         gBattle_WIN0V = 0x5051;
         ScanlineEffect_Clear();
 
-        i = 0;
-        while (i < 80)
+        for (i = 0; i < 80; i++)
         {
             gScanlineEffectRegBuffers[0][i] = 0xF0;
             gScanlineEffectRegBuffers[1][i] = 0xF0;
-            i++;
         }
 
-        while (i < 160)
+        for (; i < 160; i++)
         {
             gScanlineEffectRegBuffers[0][i] = 0xFF10;
             gScanlineEffectRegBuffers[1][i] = 0xFF10;
-            i++;
         }
 
         ScanlineEffect_SetParams(sIntroScanlineParams16Bit);
@@ -663,8 +647,7 @@ static void SetPlayerBerryDataInBattleStruct(void)
 
 static void SetAllPlayersBerryData(void)
 {
-    s32 i;
-    s32 j;
+    s32 i, j;
 
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK))
     {
@@ -2680,8 +2663,7 @@ void SpriteCallbackDummy_2(struct Sprite *sprite)
 
 static void sub_80398D0(struct Sprite *sprite)
 {
-    sprite->data[4]--;
-    if (sprite->data[4] == 0)
+    if (--sprite->data[4] == 0)
     {
         sprite->data[4] = 8;
         sprite->invisible ^= 1;
@@ -4647,7 +4629,7 @@ static void TurnValuesCleanUp(bool8 var0)
     gSideTimers[1].followmeTimer = 0;
 }
 
-static void SpecialStatusesClear(void)
+void SpecialStatusesClear(void)
 {
     memset(&gSpecialStatuses, 0, sizeof(gSpecialStatuses));
 }
@@ -4846,14 +4828,14 @@ static void HandleEndTurn_RanFromBattle(void)
     {
         switch (gProtectStructs[gBattlerAttacker].fleeFlag)
         {
-        default:
-            gBattlescriptCurrInstr = BattleScript_GotAwaySafely;
-            break;
         case 1:
             gBattlescriptCurrInstr = BattleScript_SmokeBallEscape;
             break;
         case 2:
             gBattlescriptCurrInstr = BattleScript_RanAwayUsingMonAbility;
+            break;
+        default:
+            gBattlescriptCurrInstr = BattleScript_GotAwaySafely;
             break;
         }
     }
