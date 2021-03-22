@@ -90,7 +90,7 @@
 #define MAX_STAT_STAGE    12
 
 // Shiny odds
-#define SHINY_ODDS 16 // Actual probability is SHINY_ODDS/65536
+#define SHINY_ODDS 4096 // Actual probability is SHINY_ODDS/65536
 #define SHINY_CHARM_REROLLS 3 // Amount of re-rolls if has Shiny Charm.
 
 // Flags for Get(Box)MonData / Set(Box)MonData
@@ -238,8 +238,8 @@
 #define STATUS_PRIMARY_FAINTED   7
 
 #define MAX_PER_STAT_EVS 255
-#define MAX_TOTAL_EVS 510
-#define EV_ITEM_RAISE_LIMIT 100
+#define MAX_TOTAL_EVS 1512
+#define EV_ITEM_RAISE_LIMIT 252
 
 #define UNOWN_FORM_COUNT 28
 
