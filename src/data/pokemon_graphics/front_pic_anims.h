@@ -6058,6 +6058,10 @@ static const union AnimCmd sAnim_AUDINO_1[] =
 
 static const union AnimCmd sAnim_TIMBURR_1[] =
 {
+    ANIMCMD_FRAME(0, 11),
+    ANIMCMD_FRAME(1, 10),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 20),
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
