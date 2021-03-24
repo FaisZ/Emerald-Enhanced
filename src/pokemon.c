@@ -1769,6 +1769,9 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_SHAYMIN - 1] = 0x13,
     [SPECIES_ARCEUS - 1] = 0x11,
 
+    //Gen 5
+    [SPECIES_TIMBURR - 1] = 0x31,
+
     //Gen 6
     [SPECIES_CHESPIN - 1] = 0x31,
     [SPECIES_QUILLADIN - 1] = 0x00,
@@ -1939,6 +1942,9 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ROTOM_FAN - 1] = 43,
     [SPECIES_ROTOM_MOW - 1] = 0,
     [SPECIES_ROTOM_WASH - 1] = 0,
+
+    // Megas
+    [SPECIES_MEGA_DUSKNOIR - 1] = 0x10,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =

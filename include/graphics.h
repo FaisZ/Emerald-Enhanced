@@ -3613,6 +3613,11 @@ extern const u32 gMonFrontPic_MegaDiancie[];
 extern const u32 gMonBackPic_MegaDiancie[];
 extern const u32 gMonPalette_MegaDiancie[];
 extern const u32 gMonShinyPalette_MegaDiancie[];
+extern const u32 gMonFrontPic_MegaDusknoir[];
+extern const u32 gMonBackPic_MegaDusknoir[];
+extern const u32 gMonPalette_MegaDusknoir[];
+extern const u32 gMonShinyPalette_MegaDusknoir[];
+extern const u8 gMonIcon_MegaDusknoir[];
 
 extern const u32 gMonFrontPic_AlolanRattata[];
 extern const u32 gMonBackPic_AlolanRattata[];

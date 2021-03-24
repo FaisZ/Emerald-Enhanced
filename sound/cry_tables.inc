@@ -913,6 +913,7 @@ gCryTable:: @ 869DCF4
 	cry Cry_Deoxys_Attack
 	cry Cry_Deoxys_Defense
 	cry Cry_Deoxys_Speed
+	cry_not Cry_Mega_Dusknoir
 
 	.align 2
 gCryTable2:: @ 869EF24
@@ -1828,3 +1829,4 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Deoxys_Attack
 	cry2 Cry_Deoxys_Defense
 	cry2 Cry_Deoxys_Speed
+	cry2_not Cry_Mega_Dusknoir

@@ -919,7 +919,8 @@
 #define SPECIES_DEOXYS_DEFENSE 907
 #define SPECIES_DEOXYS_SPEED 908
 
-#define SPECIES_EGG 909
+#define SPECIES_MEGA_DUSKNOIR 909
+#define SPECIES_EGG 910
 #define NUM_SPECIES SPECIES_EGG
 
 // Unown forms, not actual species

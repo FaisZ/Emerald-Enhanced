@@ -3550,6 +3550,11 @@ const u32 gMonFrontPic_MegaDiancie[] = INCBIN_U32("graphics/pokemon/mega_diancie
 const u32 gMonBackPic_MegaDiancie[] = INCBIN_U32("graphics/pokemon/mega_diancie/back.4bpp.lz");
 const u32 gMonPalette_MegaDiancie[] = INCBIN_U32("graphics/pokemon/mega_diancie/normal.gbapal.lz");
 const u32 gMonShinyPalette_MegaDiancie[] = INCBIN_U32("graphics/pokemon/mega_diancie/shiny.gbapal.lz");
+const u32 gMonFrontPic_MegaDusknoir[] = INCBIN_U32("graphics/pokemon/mega_dusknoir/front.4bpp.lz");
+const u32 gMonBackPic_MegaDusknoir[] = INCBIN_U32("graphics/pokemon/mega_dusknoir/back.4bpp.lz");
+const u32 gMonPalette_MegaDusknoir[] = INCBIN_U32("graphics/pokemon/mega_dusknoir/normal.gbapal.lz");
+const u32 gMonShinyPalette_MegaDusknoir[] = INCBIN_U32("graphics/pokemon/mega_dusknoir/shiny.gbapal.lz");
+const u8 gMonIcon_MegaDusknoir[] = INCBIN_U8("graphics/pokemon/mega_dusknoir/icon.4bpp");
 
 const u32 gMonFrontPic_AlolanRattata[] = INCBIN_U32("graphics/pokemon/alolan_rattata/front.4bpp.lz");
 const u32 gMonBackPic_AlolanRattata[] = INCBIN_U32("graphics/pokemon/alolan_rattata/back.4bpp.lz");

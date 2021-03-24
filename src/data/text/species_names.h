@@ -872,6 +872,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_MEGA_GALLADE] = _("Gallade"),
     [SPECIES_MEGA_AUDINO] = _("Audino"),
     [SPECIES_MEGA_DIANCIE] = _("Diancie"),
+    [SPECIES_MEGA_DUSKNOIR] = _("Dusknoir"),
 
     [SPECIES_ALOLAN_RATTATA] = _("Rattata"),
     [SPECIES_ALOLAN_RATICATE] = _("Raticate"),

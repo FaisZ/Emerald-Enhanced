@@ -22364,6 +22364,33 @@ const struct BaseStats gBaseStats[] =
         .bodyColor = BODY_COLOR_YELLOW,
     },
 
+    [SPECIES_MEGA_DUSKNOIR] =
+    {
+        .baseHP        = 45,
+        .baseAttack    = 165,
+        .baseDefense   = 135,
+        .baseSpeed     = 105,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 135,
+        .type1 = TYPE_GHOST,
+        .type2 = TYPE_DARK,
+        .catchRate = 45,
+        .expYield = 236,
+        .evYield_Defense   = 1,
+        .evYield_SpDefense = 2,
+        .item2 = ITEM_SPELL_TAG,
+        .genderRatio = PERCENT_FEMALE(50),
+        .eggCycles = 25,
+        .friendship = 35,
+        .growthRate = GROWTH_FAST,
+        .eggGroup1 = EGG_GROUP_AMORPHOUS,
+        .eggGroup2 = EGG_GROUP_AMORPHOUS,
+        .abilities = {ABILITY_IRON_FIST, ABILITY_IRON_FIST},
+        .abilityHidden = ABILITY_IRON_FIST,
+        .noFlip = FALSE,
+        .bodyColor = BODY_COLOR_BLACK,
+    },
+
     [SPECIES_ALOLAN_RATTATA] =
     {
         .baseHP        = 30,

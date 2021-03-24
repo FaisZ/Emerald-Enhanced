@@ -896,6 +896,8 @@ const u8 *const gMonIconTable[] =
     [SPECIES_MEGA_GALLADE] = gMonIcon_MegaGallade,
     [SPECIES_MEGA_AUDINO] = gMonIcon_MegaAudino,
     [SPECIES_MEGA_DIANCIE] = gMonIcon_MegaDiancie,
+    [SPECIES_MEGA_DUSKNOIR] = gMonIcon_MegaDusknoir,
+
     [SPECIES_ALOLAN_RATTATA] = gMonIcon_AlolanRattata,
     [SPECIES_ALOLAN_RATICATE] = gMonIcon_AlolanRaticate,
     [SPECIES_ALOLAN_RAICHU] = gMonIcon_AlolanRaichu,
@@ -1841,6 +1843,8 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_MEGA_GALLADE] = 1,
     [SPECIES_MEGA_AUDINO] = 1,
     [SPECIES_MEGA_DIANCIE] = 0,
+    [SPECIES_MEGA_DUSKNOIR] = 2,
+
     [SPECIES_ALOLAN_RATTATA] = 2,
     [SPECIES_ALOLAN_RATICATE] = 2,
     [SPECIES_ALOLAN_RAICHU] = 2,

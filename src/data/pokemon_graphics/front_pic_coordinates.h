@@ -4192,6 +4192,11 @@ const struct MonCoords gMonFrontPicCoords[] =
         .y_offset = 13,
     },
     // Megas
+    [SPECIES_MEGA_DUSKNOIR] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
     [SPECIES_MEGA_DIANCIE] =
     {
         .size = 0,
