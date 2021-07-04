@@ -3009,3 +3009,9 @@ static const u8 sGemPowderDesc [] = _(
     "Dust made from\n"
     "various jewels.\n"
     "Sells well.");
+
+static const u8 sAbnormalGemDesc[] = _(
+    "This stone enables\n"
+    "many Pokémon to Mega\n"
+    "Evolve in battle.");
+

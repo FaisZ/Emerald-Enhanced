@@ -8107,4 +8107,17 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .secondaryId = 0,
     },
+    [ITEM_MEGA_ABNORMAL] =
+    {
+        .name = _("Abnormal Gem"),
+        .itemId = ITEM_MEGA_ABNORMAL,
+        .price = 1000,
+        .holdEffect = HOLD_EFFECT_MEGA_STONE,
+        .description = sAbnormalGemDesc,
+        .pocket = POCKET_ITEMS,
+        .type = 4,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .secondaryId = 0,
+    },
+
 };
