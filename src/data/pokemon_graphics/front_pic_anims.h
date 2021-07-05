@@ -8209,6 +8209,46 @@ static const union AnimCmd sAnim_MEGA_DUSKNOIR_1[] =
 	ANIMCMD_FRAME(0, 1),
 	ANIMCMD_END,
 };
+static const union AnimCmd sAnim_MEGA_WALREIN_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_MILOTIC_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_CROBAT_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_DRAGONITE_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_HAXORUS_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_MEGANIUM_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_FERALIGATR_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_TYPHLOSION_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
 
 static const union AnimCmd sAnim_ALOLAN_RATTATA_1[] =
 {
@@ -13016,6 +13056,38 @@ static const union AnimCmd *const sAnims_MEGA_DUSKNOIR[] ={
 	sAnim_GeneralFrame0,
 	sAnim_MEGA_DUSKNOIR_1,
 };
+static const union AnimCmd *const sAnims_MEGA_WALREIN[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_WALREIN_1,
+};
+static const union AnimCmd *const sAnims_MEGA_MILOTIC[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_MILOTIC_1,
+};
+static const union AnimCmd *const sAnims_MEGA_CROBAT[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_CROBAT_1,
+};
+static const union AnimCmd *const sAnims_MEGA_DRAGONITE[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_DRAGONITE_1,
+};
+static const union AnimCmd *const sAnims_MEGA_HAXORUS[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_HAXORUS_1,
+};
+static const union AnimCmd *const sAnims_MEGA_MEGANIUM[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_MEGANIUM_1,
+};
+static const union AnimCmd *const sAnims_MEGA_FERALIGATR[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_FERALIGATR_1,
+};
+static const union AnimCmd *const sAnims_MEGA_TYPHLOSION[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_TYPHLOSION_1,
+};
 
 static const union AnimCmd *const sAnims_ALOLAN_RATTATA[] ={
     sAnim_GeneralFrame0,
@@ -14092,6 +14164,14 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MEGA_AUDINO),
     ANIM_CMD(MEGA_DIANCIE),
     ANIM_CMD(MEGA_DUSKNOIR),
+    ANIM_CMD(MEGA_WALREIN),
+    ANIM_CMD(MEGA_MILOTIC),
+    ANIM_CMD(MEGA_CROBAT),
+    ANIM_CMD(MEGA_DRAGONITE),
+    ANIM_CMD(MEGA_HAXORUS),
+    ANIM_CMD(MEGA_MEGANIUM),
+    ANIM_CMD(MEGA_FERALIGATR),
+    ANIM_CMD(MEGA_TYPHLOSION),
     ANIM_CMD(ALOLAN_RATTATA),
     ANIM_CMD(ALOLAN_RATICATE),
     ANIM_CMD(ALOLAN_RAICHU),

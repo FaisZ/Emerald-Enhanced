@@ -4031,6 +4031,38 @@ Cry_Mega_Dusknoir::
 	.incbin "sound/direct_sound_samples/cries/cry_not_dusknoir.bin"
 
 	.align 2
+Cry_Mega_Walrein::
+	.incbin "sound/direct_sound_samples/cries/cry_walrein.bin"
+
+	.align 2
+Cry_Mega_Milotic::
+	.incbin "sound/direct_sound_samples/cries/cry_milotic.bin"
+
+	.align 2
+Cry_Mega_Crobat::
+	.incbin "sound/direct_sound_samples/cries/cry_crobat.bin"
+
+	.align 2
+Cry_Mega_Dragonite::
+	.incbin "sound/direct_sound_samples/cries/cry_dragonite.bin"
+
+	.align 2
+Cry_Mega_Haxorus::
+	.incbin "sound/direct_sound_samples/cries/cry_not_haxorus.bin"
+
+	.align 2
+Cry_Mega_Meganium::
+	.incbin "sound/direct_sound_samples/cries/cry_meganium.bin"
+
+	.align 2
+Cry_Mega_Feraligatr::
+	.incbin "sound/direct_sound_samples/cries/cry_feraligatr.bin"
+
+	.align 2
+Cry_Mega_Typhlosion::
+	.incbin "sound/direct_sound_samples/cries/cry_typhlosion.bin"
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 

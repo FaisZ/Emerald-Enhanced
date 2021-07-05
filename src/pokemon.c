@@ -1945,6 +1945,14 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
 
     // Megas
     [SPECIES_MEGA_DUSKNOIR - 1] = 0x10,
+    [SPECIES_MEGA_WALREIN - 1] = 0x10,
+    [SPECIES_MEGA_MILOTIC - 1] = 0x10,
+    [SPECIES_MEGA_CROBAT - 1] = 0x10,
+    [SPECIES_MEGA_DRAGONITE - 1] = 0x10,
+    [SPECIES_MEGA_HAXORUS - 1] = 0x10,
+    [SPECIES_MEGA_MEGANIUM - 1] = 0x10,
+    [SPECIES_MEGA_FERALIGATR - 1] = 0x10,
+    [SPECIES_MEGA_TYPHLOSION - 1] = 0x10,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =

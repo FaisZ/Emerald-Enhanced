@@ -914,6 +914,14 @@ gCryTable:: @ 869DCF4
 	cry Cry_Deoxys_Defense
 	cry Cry_Deoxys_Speed
 	cry_not Cry_Mega_Dusknoir
+  cry_not Cry_Mega_Walrein
+  cry_not Cry_Mega_Milotic
+  cry_not Cry_Mega_Crobat
+  cry_not Cry_Mega_Dragonite
+  cry_not Cry_Mega_Haxorus
+  cry_not Cry_Mega_Meganium
+  cry_not Cry_Mega_Feraligatr
+  cry_not Cry_Mega_Typhlosion
 
 	.align 2
 gCryTable2:: @ 869EF24
@@ -1830,3 +1838,11 @@ gCryTable2:: @ 869EF24
 	cry2 Cry_Deoxys_Defense
 	cry2 Cry_Deoxys_Speed
 	cry2_not Cry_Mega_Dusknoir
+  cry2_not Cry_Mega_Walrein
+  cry2_not Cry_Mega_Milotic
+  cry2_not Cry_Mega_Crobat
+  cry2_not Cry_Mega_Dragonite
+  cry2_not Cry_Mega_Haxorus
+  cry2_not Cry_Mega_Meganium
+  cry2_not Cry_Mega_Feraligatr
+  cry2_not Cry_Mega_Typhlosion

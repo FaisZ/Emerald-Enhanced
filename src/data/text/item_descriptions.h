@@ -3012,6 +3012,6 @@ static const u8 sGemPowderDesc [] = _(
 
 static const u8 sAbnormalGemDesc[] = _(
     "This stone enables\n"
-    "many Pokémon to Mega\n"
-    "Evolve in battle.");
+    "many Pokémon to\n"
+    "mega evolve.");
 

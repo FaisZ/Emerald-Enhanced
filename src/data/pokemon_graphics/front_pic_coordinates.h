@@ -4197,6 +4197,46 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = 0,
         .y_offset = 0,
     },
+    [SPECIES_MEGA_WALREIN] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_MILOTIC] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_CROBAT] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_DRAGONITE] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_HAXORUS] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_MEGANIUM] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_FERALIGATR] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
+    [SPECIES_MEGA_TYPHLOSION] =
+    {
+        .size = 0,
+        .y_offset = 0,
+    },
     [SPECIES_MEGA_DIANCIE] =
     {
         .size = 0,

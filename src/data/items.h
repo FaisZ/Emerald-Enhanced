@@ -8111,7 +8111,7 @@ const struct Item gItems[] =
     {
         .name = _("Abnormal Gem"),
         .itemId = ITEM_MEGA_ABNORMAL,
-        .price = 1000,
+        .price = 199998,
         .holdEffect = HOLD_EFFECT_MEGA_STONE,
         .description = sAbnormalGemDesc,
         .pocket = POCKET_ITEMS,
