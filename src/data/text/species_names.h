@@ -881,6 +881,8 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_MEGA_MEGANIUM] = _("Meganium"),
     [SPECIES_MEGA_FERALIGATR] = _("Feraligatr"),
     [SPECIES_MEGA_TYPHLOSION] = _("Typhlosion"),
+    [SPECIES_MEGA_MACHAMP] = _("Machamp"),
+    [SPECIES_MEGA_LUXRAY] = _("Luxray"),
 
     [SPECIES_ALOLAN_RATTATA] = _("Rattata"),
     [SPECIES_ALOLAN_RATICATE] = _("Raticate"),

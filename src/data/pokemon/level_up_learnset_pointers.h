@@ -882,6 +882,8 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_MEGA_MEGANIUM] = sMeganiumLevelUpLearnset,
     [SPECIES_MEGA_FERALIGATR] = sFeraligatrLevelUpLearnset,
     [SPECIES_MEGA_TYPHLOSION] = sTyphlosionLevelUpLearnset,
+    [SPECIES_MEGA_MACHAMP] = sMachampLevelUpLearnset,
+    [SPECIES_MEGA_LUXRAY] = sLuxrayLevelUpLearnset,
 	// Alolan Forms
     [SPECIES_ALOLAN_RATTATA] = sAlolanRattataLevelUpLearnset,
     [SPECIES_ALOLAN_RATICATE] = sAlolanRaticateLevelUpLearnset,

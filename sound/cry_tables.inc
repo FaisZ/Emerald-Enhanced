@@ -922,6 +922,8 @@ gCryTable:: @ 869DCF4
   cry_not Cry_Mega_Meganium
   cry_not Cry_Mega_Feraligatr
   cry_not Cry_Mega_Typhlosion
+  cry_not Cry_Mega_Machamp
+  cry_not Cry_Mega_Luxray
 
 	.align 2
 gCryTable2:: @ 869EF24
@@ -1846,3 +1848,5 @@ gCryTable2:: @ 869EF24
   cry2_not Cry_Mega_Meganium
   cry2_not Cry_Mega_Feraligatr
   cry2_not Cry_Mega_Typhlosion
+  cry2_not Cry_Mega_Machamp
+  cry2_not Cry_Mega_Luxray

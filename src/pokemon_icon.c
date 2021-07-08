@@ -905,6 +905,8 @@ const u8 *const gMonIconTable[] =
     [SPECIES_MEGA_MEGANIUM] = gMonIcon_MegaMeganium,
     [SPECIES_MEGA_FERALIGATR] = gMonIcon_MegaFeraligatr,
     [SPECIES_MEGA_TYPHLOSION] = gMonIcon_MegaTyphlosion,
+    [SPECIES_MEGA_MACHAMP] = gMonIcon_MegaMachamp,
+    [SPECIES_MEGA_LUXRAY] = gMonIcon_MegaLuxray,
 
     [SPECIES_ALOLAN_RATTATA] = gMonIcon_AlolanRattata,
     [SPECIES_ALOLAN_RATICATE] = gMonIcon_AlolanRaticate,
@@ -1860,6 +1862,8 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_MEGA_MEGANIUM] = 2,
     [SPECIES_MEGA_FERALIGATR] = 2,
     [SPECIES_MEGA_TYPHLOSION] = 2,
+    [SPECIES_MEGA_MACHAMP] = 0,
+    [SPECIES_MEGA_LUXRAY] = 0,
 
     [SPECIES_ALOLAN_RATTATA] = 2,
     [SPECIES_ALOLAN_RATICATE] = 2,

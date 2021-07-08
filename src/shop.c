@@ -182,6 +182,7 @@ static const u16 sShopInventory_FiveBadges[] = {
     ITEM_REPEL,
     ITEM_SUPER_REPEL,
     ITEM_POKE_DOLL,
+    ITEM_MEGA_ABNORMAL,
     ITEM_NONE
 };
 
@@ -202,6 +203,7 @@ static const u16 sShopInventory_SixBadges[] = {
     ITEM_REPEL,
     ITEM_SUPER_REPEL,
     ITEM_POKE_DOLL,
+    ITEM_MEGA_ABNORMAL,
     ITEM_NONE
 };
 
@@ -224,6 +226,7 @@ static const u16 sShopInventory_SevenBadges[] = {
     ITEM_SUPER_REPEL,
     ITEM_MAX_REPEL,
     ITEM_POKE_DOLL,
+    ITEM_MEGA_ABNORMAL,
     ITEM_NONE
 };
 
@@ -247,6 +250,7 @@ static const u16 sShopInventory_EightBadges[] = {
     ITEM_SUPER_REPEL,
     ITEM_MAX_REPEL,
     ITEM_POKE_DOLL,
+    ITEM_MEGA_ABNORMAL,
     ITEM_NONE
 };
 

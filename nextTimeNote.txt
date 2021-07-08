@@ -1,0 +1,7 @@
+fire/ghost	-> devimp fire-> fire/dark
+steel/psychic	-> comite rock/psychic
+electric/dark	-> slatic grass -> grass/electric
+psychic/fairy	-> toddra fairy -> fairy/dragon
+poison/bug	-> orett steel -> steel/bug
+fighting/rock	-> swabone fighting -> fighting/ghost
+water/ice	-> salatad water -> water/poison

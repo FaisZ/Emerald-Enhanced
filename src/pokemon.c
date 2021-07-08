@@ -1953,6 +1953,8 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_MEGA_MEGANIUM - 1] = 0x10,
     [SPECIES_MEGA_FERALIGATR - 1] = 0x10,
     [SPECIES_MEGA_TYPHLOSION - 1] = 0x10,
+    [SPECIES_MEGA_MACHAMP - 1] = 0x10,
+    [SPECIES_MEGA_LUXRAY - 1] = 0x10,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
@@ -6372,16 +6374,17 @@ void ClearBattleMonForms(void)
 }
 
 const u16 sBattleThemes[] = {
-    MUS_BATTLE20,
-    MUS_BATTLE30,
-    MUS_BATTLE32,
-    MUS_BATTLE35,
-    MUS_BATTLE38,
-    MUS_VS_FRONT,
-    MUS_RG_VS_TORE,
-    MUS_RG_VS_YASEI,
-    MUS_RG_VS_GYM,
-    MUS_RG_VS_MYU2,
+    MUS_BATTLE20, //Trainer RSE
+    MUS_BATTLE30, //Team Leader RSE
+    MUS_BATTLE32, //Gym Leader RSE
+    MUS_BATTLE35, //Rival RSE
+    MUS_BATTLE38, //Elite Four RSE
+    MUS_VS_FRONT, //Frontier Brains
+    MUS_RG_VS_TORE, //FRLG Trainer
+    MUS_RG_VS_YASEI, //FRLG Wild
+    MUS_RG_VS_GYM, //FRLG Gym
+    MUS_RG_VS_MYU2, //FRLG Mew
+    MUS_RG_VS_CHAMPION, //FRLG Champion
 };
 
 u16 GetBattleBGM(void)
@@ -6424,14 +6427,17 @@ u16 GetBattleBGM(void)
             case TRAINER_CLASS_DEVON_ENFORCER:
                 return MUS_BATTLE31;
             case TRAINER_CLASS_LEADER:
-                return MUS_BATTLE32;
+                // return MUS_BATTLE32;
+                return MUS_RG_VS_GYM;
             case TRAINER_CLASS_CHAMPION:
-                return MUS_BATTLE33;
+                // return MUS_BATTLE33;
+                return MUS_RG_VS_CHAMPION;
             case TRAINER_CLASS_PKMN_TRAINER_3:
                 if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                     return MUS_BATTLE35;
                 if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))
-                    return MUS_BATTLE20;
+                    // return MUS_BATTLE20;
+                    return MUS_RG_VS_TORE;
                 return MUS_BATTLE35;
             case TRAINER_CLASS_ELITE_FOUR:
                 return MUS_BATTLE38;
@@ -6449,13 +6455,15 @@ u16 GetBattleBGM(void)
                 if (gMapHeader.regionMapSectionId == MAPSEC_MIRAGE_TOWER)
                     return MUS_B_PALACE;
                 else
-                    return MUS_BATTLE20;
+                    // return MUS_BATTLE20; //Trainer Battle
+                    return MUS_RG_VS_TORE; //Trainer Battle
 
             return MUS_BATTLE27;
         }
     }
     else
-        return MUS_VS_WILD;
+        // return MUS_VS_WILD;
+        return MUS_RG_VS_YASEI;
 }
 
 void PlayBattleBGM(void)

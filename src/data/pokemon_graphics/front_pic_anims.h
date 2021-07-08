@@ -8249,6 +8249,16 @@ static const union AnimCmd sAnim_MEGA_TYPHLOSION_1[] =
 	ANIMCMD_FRAME(0, 1),
 	ANIMCMD_END,
 };
+static const union AnimCmd sAnim_MEGA_MACHAMP_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
+static const union AnimCmd sAnim_MEGA_LUXRAY_1[] =
+{
+	ANIMCMD_FRAME(0, 1),
+	ANIMCMD_END,
+};
 
 static const union AnimCmd sAnim_ALOLAN_RATTATA_1[] =
 {
@@ -13089,6 +13099,16 @@ static const union AnimCmd *const sAnims_MEGA_TYPHLOSION[] ={
 	sAnim_MEGA_TYPHLOSION_1,
 };
 
+static const union AnimCmd *const sAnims_MEGA_MACHAMP[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_MACHAMP_1,
+};
+
+static const union AnimCmd *const sAnims_MEGA_LUXRAY[] ={
+	sAnim_GeneralFrame0,
+	sAnim_MEGA_LUXRAY_1,
+};
+
 static const union AnimCmd *const sAnims_ALOLAN_RATTATA[] ={
     sAnim_GeneralFrame0,
     sAnim_ALOLAN_RATTATA_1,
@@ -14172,6 +14192,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(MEGA_MEGANIUM),
     ANIM_CMD(MEGA_FERALIGATR),
     ANIM_CMD(MEGA_TYPHLOSION),
+    ANIM_CMD(MEGA_MACHAMP),
+    ANIM_CMD(MEGA_LUXRAY),
     ANIM_CMD(ALOLAN_RATTATA),
     ANIM_CMD(ALOLAN_RATICATE),
     ANIM_CMD(ALOLAN_RAICHU),

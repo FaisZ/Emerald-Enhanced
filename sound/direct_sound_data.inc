@@ -4063,6 +4063,14 @@ Cry_Mega_Typhlosion::
 	.incbin "sound/direct_sound_samples/cries/cry_typhlosion.bin"
 
 	.align 2
+Cry_Mega_Machamp::
+	.incbin "sound/direct_sound_samples/cries/cry_machamp.bin"
+
+	.align 2
+Cry_Mega_Luxray::
+	.incbin "sound/direct_sound_samples/cries/cry_not_luxray.bin"
+
+	.align 2
 DirectSoundWaveData_register_noise::
 	.incbin "sound/direct_sound_samples/register_noise.bin"
 

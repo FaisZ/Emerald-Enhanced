@@ -3658,6 +3658,16 @@ extern const u32 gMonBackPic_MegaTyphlosion[];
 extern const u32 gMonPalette_MegaTyphlosion[];
 extern const u32 gMonShinyPalette_MegaTyphlosion[];
 extern const u8 gMonIcon_MegaTyphlosion[];
+extern const u32 gMonFrontPic_MegaMachamp[];
+extern const u32 gMonBackPic_MegaMachamp[];
+extern const u32 gMonPalette_MegaMachamp[];
+extern const u32 gMonShinyPalette_MegaMachamp[];
+extern const u8 gMonIcon_MegaMachamp[];
+extern const u32 gMonFrontPic_MegaLuxray[];
+extern const u32 gMonBackPic_MegaLuxray[];
+extern const u32 gMonPalette_MegaLuxray[];
+extern const u32 gMonShinyPalette_MegaLuxray[];
+extern const u8 gMonIcon_MegaLuxray[];
 
 extern const u32 gMonFrontPic_AlolanRattata[];
 extern const u32 gMonBackPic_AlolanRattata[];
