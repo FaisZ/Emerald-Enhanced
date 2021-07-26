@@ -3393,10 +3393,10 @@ static const struct TrainerMonItemCustomMoves sParty_Phoebe[] = {
 	{
 	.iv = 223,
 	.lvl = 88,
-	.species = SPECIES_COFAGRIGUS,
-	.heldItem = ITEM_LEFTOVERS,
+	.species = SPECIES_DUSKNOIR,
+	.heldItem = ITEM_MEGA_ABNORMAL,
 	.ability = 0,
-	.moves = {MOVE_SHADOW_BALL, MOVE_HIDDEN_POWER, MOVE_TRICK_ROOM, MOVE_NASTY_PLOT},
+	.moves = {MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_SHADOW_PUNCH},
 	}
 };
 
@@ -3410,13 +3410,13 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
 	.moves = {MOVE_EARTHQUAKE, MOVE_ICE_FANG, MOVE_STONE_EDGE, MOVE_KNOCK_OFF},
 	},
 	{
-	.iv = 250,
+	.iv = 255,
 	.lvl = 90,
-	.species = SPECIES_WALREIN,
+	.species = SPECIES_GLALIE,
 	.heldItem = ITEM_LIFE_ORB,
-	.ability = 1,
-	.moves = {MOVE_BLIZZARD, MOVE_SURF, MOVE_SIGNAL_BEAM, MOVE_ROCK_SLIDE},
-	},
+	.ability = 2,
+	.moves = {MOVE_ICE_FANG, MOVE_CRUNCH, MOVE_THUNDER_FANG, MOVE_EARTHQUAKE},
+	}
 	{
 	.iv = 250,
 	.lvl = 91,
@@ -3442,13 +3442,13 @@ static const struct TrainerMonItemCustomMoves sParty_Glacia[] = {
 	.moves = {MOVE_KNOCK_OFF, MOVE_ICICLE_CRASH, MOVE_ICE_SHARD, MOVE_LOW_KICK},
 	},
 	{
-	.iv = 255,
+	.iv = 250,
 	.lvl = 92,
-	.species = SPECIES_GLALIE,
-	.heldItem = ITEM_GLALITITE,
-	.ability = 2,
-	.moves = {MOVE_ICE_FANG, MOVE_CRUNCH, MOVE_THUNDER_FANG, MOVE_EARTHQUAKE},
-	}
+	.species = SPECIES_WALREIN,
+	.heldItem = ITEM_MEGA_ABNORMAL,
+	.ability = 1,
+	.moves = {MOVE_BLIZZARD, MOVE_SURF, MOVE_SIGNAL_BEAM, MOVE_ROCK_SLIDE},
+	},
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Drake[] = {
@@ -4655,10 +4655,10 @@ static const struct TrainerMonItemCustomMoves sParty_Wallace[] = {
 	{
 	.iv = 255,
 	.lvl = 105,
-	.species = SPECIES_SEISMITOAD,
-	.heldItem = ITEM_LIFE_ORB,
+	.species = SPECIES_MILOTIC,
+	.heldItem = ITEM_MEGA_ABNORMAL,
 	.ability = 0,
-	.moves = {MOVE_LIQUIDATION, MOVE_EARTHQUAKE, MOVE_SLUDGE_WAVE, MOVE_RAIN_DANCE},
+	.moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_MOONBLAST, MOVE_RECOVER},
 	}
 };
 
@@ -7200,12 +7200,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute119Torchic[]
 static const struct TrainerMonNoItemDefaultMoves sParty_Dawn1[] = {
 	{
 	.iv = 0,
-	.lvl = 10,
-	.species = SPECIES_ROSELIA,
+	.lvl = 3,
+	.species = SPECIES_BUDEW,
 	},
 	{
 	.iv = 0,
-	.lvl = 8,
+	.lvl = 7,
 	.species = SPECIES_TOGEPI,
 	}
 };
